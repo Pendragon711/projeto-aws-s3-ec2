@@ -39,13 +39,13 @@ O bucket foi utilizado como repositório de armazenamento do arquivo de configur
 
 Foi criado um bucket no Amazon S3 para armazenamento dos objetos utilizados no projeto.
 
-![Bucket S3](imagens/01-s3-bucket.png)
+![Bucket S3](Imagens/01-s3-bucket.png)
 
 ### Arquivo armazenado no bucket
 
 Dentro do bucket foi disponibilizado o arquivo `user-data.txt`, contendo o script de inicialização utilizado pela instância EC2.
 
-![Objeto S3](imagens/03-s3-objeto-user-data.png)
+![Objeto S3](Imagens/03-s3-objeto-user-data.png)
 
 ## 2. Amazon EC2 — Provisionamento da instância
 
@@ -62,7 +62,7 @@ Durante a criação da instância foram definidos os seguintes parâmetros:
 - Região: **us-east-1 (N. Virginia)**
 - Zona de disponibilidade: **us-east-1a**
 
-![Criação da instância EC2](imagens/05-ec2-criacao.png)
+![Criação da instância EC2](Imagens/05-ec2-criacao.png)
 
 ### Seleção da AMI
 
@@ -72,7 +72,7 @@ Foi utilizada a imagem:
 
 Essa imagem foi escolhida como sistema operacional base para a execução do servidor.
 
-![AMI Amazon Linux](imagens/06-ec2-ami-nome.png)
+![AMI Amazon Linux](Imagens/06-ec2-ami-nome.png)
 
 ### Escolha do tipo de instância
 
@@ -82,7 +82,7 @@ Foi selecionada a instância:
 
 Essa configuração fornece recursos computacionais adequados para aplicações de baixo consumo e ambientes de testes.
 
-![Tipo de instância t3.micro](imagens/07-t3-micro.png)
+![Tipo de instância t3.micro](Imagens/07-t3-micro.png)
 
 ## 3. Configuração de rede e segurança
 
@@ -98,7 +98,7 @@ Foi utilizada a VPC:
 
 A VPC é responsável por fornecer o ambiente de rede isolado onde os recursos AWS são executados.
 
-![Configuração da VPC](imagens/09-vpc.png)
+![Configuração da VPC](Imagens/09-vpc.png)
 
 ### Configuração da sub-rede
 
@@ -106,7 +106,7 @@ A instância foi provisionada em uma sub-rede localizada na Zona de Disponibilid
 
 **us-east-1a**
 
-![Configuração da sub-rede](imagens/10-subnet.png)
+![Configuração da sub-rede](Imagens/10-subnet.png)
 
 ### Configuração do Security Group
 
@@ -120,7 +120,7 @@ Configuração aplicada:
 
 Essa configuração permite o acesso ao servidor web através do protocolo HTTP.
 
-![Security Group](imagens/11-security-group.png)
+![Security Group](Imagens/11-security-group.png)
 
 ## 4. Armazenamento e automação da instância
 
@@ -135,7 +135,7 @@ Configuração utilizada:
 
 O Amazon EBS fornece armazenamento persistente que permanece associado à instância EC2 durante seu ciclo de vida.
 
-![Configuração de armazenamento EBS](imagens/12-armazenamento-ebs.png)
+![Configuração de armazenamento EBS](Imagens/12-armazenamento-ebs.png)
 
 ---
 
@@ -147,7 +147,7 @@ O arquivo `user-data.txt`, armazenado anteriormente no Amazon S3, foi utilizado 
 
 O script é executado durante o primeiro boot da instância e realiza a instalação e configuração do servidor web automaticamente.
 
-![Configuração do User Data](imagens/13-user-data-configurado.png)
+![Configuração do User Data](Imagens/13-user-data-configurado.png)
 
 ## 5. Resultado final
 
@@ -160,7 +160,7 @@ O ambiente foi configurado com:
 - Acesso HTTP habilitado através do Security Group;
 - Armazenamento persistente utilizando Amazon EBS.
 
-![Instância EC2 em execução](imagens/15-instancia-running.png)
+![Instância EC2 em execução](Imagens/15-instancia-running.png)
 
 ---
 
